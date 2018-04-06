@@ -1,12 +1,9 @@
 class User < ApplicationRecord
 
-  validates :password_digession, :session_token, presence: true
-  validates :password, length: { minimnum: 6, allow_nil: true }
+  validates :password_digest, :session_token, presence: true
+  validates :password, length: { minimum: 6, allow_nil: true }
 
   attr_reader :password
-
-  has_many :likes
-  has_many :matches
 
   after_initialize :ensure_cupids_arrow
 
