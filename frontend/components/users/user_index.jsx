@@ -11,8 +11,12 @@ class UserIndex extends React.Component {
   }
 
   render() {
+    if (this.props.users.length === 0) {
+      return <div>Loading...</div>;
+    }
+
     const users = this.props.users.map(user => {
-      return <UserIndexItem key={user.id} user={user} imgUrl={user.imgUrl} />;
+      return <UserIndexItem key={user.id} user={user} />;
     });
 
     return (

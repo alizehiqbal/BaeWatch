@@ -1,0 +1,46 @@
+body {
+  font-family: "Otari";
+  font-size: 20px;
+  font-weight: 400;
+  background: #fffdd0;
+}
+
+.login-form-container {
+  display: flex;
+  margin: 0 auto;
+  border: 1px solid #ff00ff;
+  border-radius: 10px;
+  width: 1000px;
+  padding: 20px;
+}
+
+.session-submit {
+  font-family: "Otari";
+  font-size: 16px;
+  background-color: #ff00ff;
+  text-decoration-color: white;
+  border-radius: 4px;
+  color: white;
+}
+
+.fb {
+  background-image: url("https://www.bigapple.in/img/login-facebook.png");
+  background-size: cover;
+  height: 30px;
+  width: 200px;
+}
+
+.login-form-buttonies {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.demo-button {
+  font-family: "Otari";
+  font-size: 16px;
+  background-color: #ff00ff;
+  text-decoration-color: white;
+  border-radius: 4px;
+  color: white;
+}

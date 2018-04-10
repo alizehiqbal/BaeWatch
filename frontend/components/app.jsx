@@ -2,7 +2,8 @@ import React from "react";
 import { Route, Link, HashRouter, Redirect, Switch } from "react-router-dom";
 import SignupFormContainer from "./signup_form_container";
 import LoginFormContainer from "./login_form_container";
-import UserIndex from "./users/user_index";
+import UserIndexContainer from "./users/user_index_container";
+import Splash from "./splash";
 const App = () => (
   <div>
     <header>
@@ -11,8 +12,8 @@ const App = () => (
     <Switch>
       <Route path="/login" component={LoginFormContainer} />
       <Route path="/signup" component={SignupFormContainer} />
+      <Route path="/dashboard" component={UserIndexContainer} />
       <Route path="/" component={Splash} />
-      <Route path="/dashboard" component={UserIndex} />
     </Switch>
   </div>
 );

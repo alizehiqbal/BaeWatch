@@ -16,9 +16,9 @@ class Api::SessionsController < ApplicationController
     @user = current_user
     if @user
       logout
-      render json: {message: "Get outta town, Charlie Brown"}
+      render "api/users/show"
     else
-      render json: current_user.errors.full_messages
+      render json: ["D'aw, nobody's signed in!"], status 401
     end
 
   end

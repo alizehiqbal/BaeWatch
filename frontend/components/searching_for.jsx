@@ -5,8 +5,9 @@ import Dropdown, {
   DropdownContent
 } from "react-simple-dropdown";
 
-class UserDropDown extends React.Component {
-  constructor() {
+class SearchingFor extends React.Component {
+  constructor(props) {
+    super(props);
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -31,3 +32,5 @@ class UserDropDown extends React.Component {
     );
   }
 }
+
+export default SearchingFor;

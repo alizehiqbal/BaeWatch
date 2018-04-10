@@ -1,0 +1,24 @@
+.slider {
+  height: 700px;
+  width: 100%;
+}
+
+.slider.one {
+  background-image: image-url("sliderone.jpg");
+  background-size: 100%;
+}
+
+.slider.two {
+  background-image: url("https://i.pinimg.com/236x/3a/d5/49/3ad5498dbe82d481f2695dd9921969c1--valentines-day-quotes-valentines-day.jpg");
+  background-size: 100%;
+}
+
+.slider.three {
+  background-image: url("https://regmedia.co.uk/2015/08/04/shutterstock_21734785_tent.jpg?x=442&y=293&crop=1");
+  background-size: 100%;
+}
+
+.slider.four {
+  background-image: url("https://thumbs.dreamstime.com/b/gay-couple-laying-bed-using-laptop-non-traditional-romance-young-handsome-cheerful-men-smiling-together-80610673.jpg");
+  background-size: 100%;
+}

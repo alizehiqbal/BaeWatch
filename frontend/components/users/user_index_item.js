@@ -14,20 +14,37 @@ class UserIndexItem extends React.Component {
 
   renderModal(props) {
     this.setState({ modalOpen: true });
-    return (
-      <h3>{this.props.user.first_name} {this.props.user.last_name}</h3>
-      <p>{this.props.user.description}</p>
-      <button onClick={() => modalHandler()}>Cool, moving along!</button>
-    )
+  }
+
+  modal() {
+    if (this.state.modalOpen) {
+      return (
+        <div>
+          <h3>
+            {this.props.user.first_name} {this.props.user.last_name}
+          </h3>
+          <p>{this.props.user.description}</p>
+          <button onClick={() => this.modalHandler()}>
+            Cool, moving along!
+          </button>
+        </div>
+      );
+    } else {
+      return;
+    }
   }
 
   render() {
-    <li className="article-index-item">
-      <img src={imgUrl} />
+    const user = this.props.user;
+    return (
+      <li className="article-index-item">
+        <img src={user.imgUrl} />
 
-      <div className="article-index-item-info">{username}</div>
-      <button onClick={() => this.renderModal()}>Learn More!</button>
-    </li>;
+        <div className="article-index-item-info">{user.username}</div>
+        <button onClick={() => this.renderModal()}>Learn More!</button>
+        {this.modal()}
+      </li>
+    );
   }
 }
 
