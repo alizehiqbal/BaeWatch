@@ -1,9 +1,10 @@
 import React from "react";
 import { Route, Link, HashRouter, Redirect, Switch } from "react-router-dom";
-import SignupFormContainer from "./signup_form_container";
-import LoginFormContainer from "./login_form_container";
+import SignupFormContainer from "./splash/signup_form_container";
+import LoginFormContainer from "./splash/login_form_container";
 import UserIndexContainer from "./users/user_index_container";
-import Splash from "./splash";
+import Splash from "./splash/splash";
+
 const App = () => (
   <div>
     <header>

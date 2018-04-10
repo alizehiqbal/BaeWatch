@@ -1,5 +1,5 @@
 import React from "react";
-import NavBarContainer from "./navbar_container";
+import NavBarContainer from "../navbar/navbar_container";
 // import SearchingFor from "./searching_for";
 // import SimpleSlider from "./backroundslides";
 // <SimpleSlider />
