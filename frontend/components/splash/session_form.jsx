@@ -10,12 +10,13 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
-    this.demoState = { username: "username", password: "password" };
+    this.demoState = { username: "durian_lover666", password: "AppAcademy1" };
   }
 
-  demoLogin() {
-    this.setState(this.demoState);
-    this.props.processForm(this.state).then(() => this.props.history.push("/"));
+  demoLogin(e) {
+    // this.setState(this.demoState);
+    e.preventDefault();
+    this.props.processForm(this.demoState);
   }
 
   update(field) {
@@ -45,7 +46,11 @@ class SessionForm extends React.Component {
     let demoButton = undefined;
     if (this.props.formType === "Login") {
       demoButton = (
-        <button className="demo-button" onClick={this.demoLogin} type="submit">
+        <button
+          className="demo-button"
+          onClick={e => this.demoLogin(e)}
+          type="submit"
+        >
           Demo Login
         </button>
       );
@@ -53,7 +58,7 @@ class SessionForm extends React.Component {
     return (
       <body>
         <div className="login-form-container">
-          <form onSubmit={this.handleSubmit} className="login-form-box">
+          <form onSubmit={e => this.handleSubmit(e)} className="login-form-box">
             Hey, you. Yeah, you. Ready to debug love?
             <br />
             Please {this.props.formType}

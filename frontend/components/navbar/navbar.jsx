@@ -1,23 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const sessionLinks = () => (
-  <nav className="login-signup">
-    <Link to="/login">Login or </Link>
-    <Link to="/signup">Sign up!</Link>
-  </nav>
-);
+class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-const howdie = (currentUser, logout) => (
-  <hgroup className="header-group">
-    <h2 className="header-name">Hey, {currentUser.username}!</h2>
-    <button className="header-button" onClick={logout}>
-      Log Out
-    </button>
-  </hgroup>
-);
+  render() {
+    return (
+      <div className="navbar-container">
+        <nav className="login-signup">
+          <Link to="/login">Login or </Link>
+          <Link to="/signup">Sign up!</Link>
+        </nav>
+      </div>
+    );
+  }
+}
 
-const sayHowdie = ({ currentUser, logout }) =>
-  currentUser ? howdie(currentUser, logout) : sessionLinks();
-
-export default sayHowdie;
+export default NavBar;

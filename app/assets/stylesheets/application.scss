@@ -18,3 +18,21 @@
 @import "session.scss";
 @import "splash.scss";
 @import "dashboard.scss";
+
+.app-container {
+  header {
+    background: pink;
+    h1 {
+      font-size: 32px;
+    }
+
+    .navbar-container {
+    }
+  }
+
+  main {
+  }
+
+  footer {
+  }
+}
