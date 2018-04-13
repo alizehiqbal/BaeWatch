@@ -18,19 +18,22 @@
 @import "session.scss";
 @import "splash.scss";
 @import "dashboard.scss";
-
+//
 .app-container {
   header {
-    background: pink;
     h1 {
       font-size: 32px;
+      font-weight: bold;
     }
 
-    .navbar-container {
+    .nav {
+      display: flex;
+      justify-content: space-between;
     }
   }
 
   main {
+    margin-top: 30px;
   }
 
   footer {

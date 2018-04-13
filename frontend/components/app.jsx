@@ -11,9 +11,11 @@ import { AuthRoute, ProtectedRoute } from "../util/route_util.js";
 const App = () => (
   <div className="app-container">
     <header>
-      <h1>Bae Watch</h1>
-      <AuthRoute path="/" component={NavBarContainer} />
-      <ProtectedRoute path="/" component={DashboardNavBarContainer} />
+      <nav className="toppy-top">
+        <h1 className="bae-watch">Bae Watch</h1>
+        <AuthRoute path="/" component={NavBarContainer} />
+        <ProtectedRoute path="/" component={DashboardNavBarContainer} />
+      </nav>
     </header>
 
     <main>

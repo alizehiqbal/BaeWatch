@@ -1,0 +1,61 @@
+.userindexhomepage ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 700px;
+  margin: auto;
+}
+
+.article-index-item img {
+  width: 200px;
+  border: 8px solid orchid;
+  border-radius: 5px;
+}
+
+.article-index-item-info {
+  width: 200px;
+}
+
+.hellyeahmodalrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 666;
+}
+
+.hellyeahmodal {
+  border: 1px solid black;
+  width: 400px;
+  position: absolute;
+  margin-left: 30vw;
+  margin-top: 300px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.bubble-button {
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: orchid;
+  color: white;
+  padding: 5px;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.butt-container {
+  width: 100%;
+  text-align: center;
+}
+
+.nother-button {
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: orchid;
+  color: white;
+  padding: 2px;
+}

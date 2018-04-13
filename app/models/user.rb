@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 
   validates :username, :password_digest, :session_token, presence: true
-  validates :username, uniqueness: true 
+  validates :username, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
   attr_reader :password
@@ -37,5 +37,21 @@ class User < ApplicationRecord
   def ensure_profile_pic
     self.img_url ||= "default_prof.png"
   end
+
+  has_many :crushes,
+    foreign_key: :admirer_id,
+    class_name: :Like
+
+  has_many :admirers,
+    foreign_key: :crush_id,
+    class_name: :Like
+
+  has_many :liked_users,
+    through: :crushes,
+    source: :crush
+
+  has_many :admiring_users,
+    through: :admirers,
+    source: :admirer
 
 end

@@ -19,14 +19,18 @@ class UserIndexItem extends React.Component {
   modal() {
     if (this.state.modalOpen) {
       return (
-        <div>
-          <h3>
-            {this.props.user.first_name} {this.props.user.last_name}
-          </h3>
-          <p>{this.props.user.description}</p>
-          <button onClick={() => this.modalHandler()}>
-            Cool, moving along!
-          </button>
+        <div className="hellyeahmodalrapper">
+          <div className="hellyeahmodal">
+            <p>{this.props.user.description}</p>
+            <div className="butt-container">
+              <button
+                className="bubble-button"
+                onClick={() => this.modalHandler()}
+              >
+                Cool, moving along!
+              </button>
+            </div>
+          </div>
         </div>
       );
     } else {
@@ -35,13 +39,16 @@ class UserIndexItem extends React.Component {
   }
 
   render() {
+    console.log(this.props.user);
     const user = this.props.user;
     return (
       <li className="article-index-item">
         <img src={user.imgUrl} />
 
-        <div className="article-index-item-info">{user.username}</div>
-        <button onClick={() => this.renderModal()}>Learn More!</button>
+        <div className="article-index-item-info">{user.first_name}</div>
+        <button className="nother-button" onClick={() => this.renderModal()}>
+          Learn More!
+        </button>
         {this.modal()}
       </li>
     );
