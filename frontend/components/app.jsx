@@ -7,6 +7,7 @@ import NavBarContainer from "./navbar/navbar_container";
 import DashboardNavBarContainer from "./navbar/dashboard_nav_container";
 import Splash from "./splash/splash";
 import { AuthRoute, ProtectedRoute } from "../util/route_util.js";
+import LikedUsersContainer from "./users/liked_users_container";
 
 const App = () => (
   <div className="app-container">
@@ -22,10 +23,17 @@ const App = () => (
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <ProtectedRoute path="/dashboard" component={UserIndexContainer} />
+      <ProtectedRoute path="/crushes" component={LikedUsersContainer} />
       <AuthRoute exact path="/" component={Splash} />
     </main>
 
-    <footer>Made by Alizeh.</footer>
+    <footer className="footer">
+      Made by Alizeh. Bob Ross quote of the day: "A tree cannot be straight if
+      it has a crooked trunk. It's life. It's interesting. It's fun. We're not
+      trying to teach you a thing to copy. We're just here to teach you a
+      technique, then let you loose into the world. You don't have to be crazy
+      to do this but it does help."
+    </footer>
   </div>
 );
 

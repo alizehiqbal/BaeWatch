@@ -4,14 +4,18 @@ class Api::LikesController < ApplicationController
     @like = Like.new(like_params)
       if @like.save
         render :show
-        e;se
+      else
+        render ["Error Creating Like"], status: 422
+      end
   end
 
   def update
     @like = Like.find(params[:id])
     if @like.update_attributes(like_params)
       @user = current_user
-      render "api/users/show"
+      render :show
+    else
+      render ["Error creating like"], status: 422
     end
   end
 

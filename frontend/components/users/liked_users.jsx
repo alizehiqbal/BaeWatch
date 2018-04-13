@@ -7,11 +7,12 @@ class LikedUsers extends React.Component {
   }
 
   render() {
-    if (this.props.likes.length === 0) {
+    console.log(this.props.user);
+    if (this.props.user.liked_users.length === 0) {
       return <div>Loading...</div>;
     }
 
-    const likes = this.props.likes.map(like => {
+    const likes = this.props.user.liked_users.map(like => {
       return (
         <LikedPerson
           key={like.id}

@@ -6,6 +6,13 @@ class LikedPerson extends React.Component {
   }
 
   render() {
-    const like = this.props.like;
+    return (
+      <div>
+        {this.props.like.first_name}
+        {this.props.like.img_url}
+      </div>
+    );
   }
 }
+
+export default LikedPerson;
