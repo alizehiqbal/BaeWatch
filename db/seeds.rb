@@ -107,7 +107,7 @@ ActiveRecord::Base.transaction do
     city: 'SF',
     description: "We tell people sometimes: we're like drug dealers, come into town and get everybody absolutely addicted to painting. It doesn't take much to get you addicted. Once you learn the technique, ohhh! Turn you loose on the world; you become a tiger. Don't be afraid to make these big decisions. Once you start, they sort of just make themselves. Go out on a limb - that's where the fruit is.",
     seeking_lang: 'Java',
-    email: 'yujeishuge@yujie.com',
+    email: 'bobross@bobross.com',
     img_url: "https://yt3.ggpht.com/a-/AJLlDp0oE1v5gLNPmxlZfgDKJfdZXc58GgyJN60Iqg=s900-mo-c-c0xffffffff-rj-k-no"
   )
 
