@@ -7,40 +7,67 @@ body {
 
 .login-form-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  border: 1px solid #ff00ff;
+  border: 2px solid #ff00ff;
   border-radius: 10px;
-  width: 1000px;
+  width: 50vw;
   padding: 20px;
+
+  .login-form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+
+    .login-input {
+      background: white;
+      border: 1px solid;
+      border-radius: 4px;
+      margin-left: 10px;
+    }
+
+    label {
+      display: flex;
+    }
+  }
 }
 
 .session-submit {
-  font-family: "Otari";
+  // font-family: "Otari";
+  text-align: center;
   font-size: 16px;
   background-color: #ff00ff;
   text-decoration-color: white;
   border-radius: 4px;
   color: white;
+  width: 100%;
+  height: 50px;
+  margin: 5px 0px;
 }
 
 .fb {
   background-image: url("https://www.bigapple.in/img/login-facebook.png");
   background-size: cover;
-  height: 30px;
-  width: 200px;
+  height: 50px;
+  // width: 200px;
+  border-radius: 4px;
+  width: 100%;
 }
 
 .login-form-buttonies {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.demo-button {
-  font-family: "Otari";
-  font-size: 16px;
-  background-color: #ff00ff;
-  text-decoration-color: white;
-  border-radius: 4px;
-  color: white;
 }

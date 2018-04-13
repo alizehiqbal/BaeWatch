@@ -47,7 +47,7 @@ class SessionForm extends React.Component {
     if (this.props.formType === "Login") {
       demoButton = (
         <button
-          className="demo-button"
+          className="session-submit"
           onClick={e => this.demoLogin(e)}
           type="submit"
         >
@@ -59,12 +59,10 @@ class SessionForm extends React.Component {
       <body>
         <div className="login-form-container">
           <form onSubmit={e => this.handleSubmit(e)} className="login-form-box">
-            Hey, you. Yeah, you. Ready to debug love?
-            <br />
-            Please {this.props.formType}
-            {this.renderErrors()}
+            <p>Hey, you. Yeah, you. Ready to debug love?</p>
+            <p>Please {this.props.formType}</p>
+            <ul>{this.renderErrors()}</ul>
             <div className="login-form">
-              <br />
               <label>
                 Username:
                 <input
@@ -74,7 +72,6 @@ class SessionForm extends React.Component {
                   className="login-input"
                 />
               </label>
-              <br />
               <label>
                 Password:
                 <input
@@ -84,7 +81,6 @@ class SessionForm extends React.Component {
                   className="login-input"
                 />
               </label>
-              <br />
               <div className="login-form-buttonies">
                 <input
                   className="session-submit"
