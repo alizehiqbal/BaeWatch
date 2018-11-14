@@ -8,6 +8,9 @@ import DashboardNavBarContainer from "./navbar/dashboard_nav_container";
 import Splash from "./splash/splash";
 import { AuthRoute, ProtectedRoute } from "../util/route_util.js";
 import LikedUsersContainer from "./users/liked_users_container";
+import ProfileContainer from "./users/my_page_container";
+import ProfEditContainer from "./users/edit_my_page_container";
+import OnboardingContainer from "./users/onboarding_boss_container";
 
 const App = () => (
   <div className="app-container">
@@ -22,8 +25,11 @@ const App = () => (
     <main>
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
+      <AuthRoute path="/onboarding" component={OnboardingContainer} />
       <ProtectedRoute path="/dashboard" component={UserIndexContainer} />
       <ProtectedRoute path="/crushes" component={LikedUsersContainer} />
+      <ProtectedRoute path="/profile" component={ProfileContainer} />
+      <ProtectedRoute path="/profile/edit" component={ProfEditContainer} />
       <AuthRoute exact path="/" component={Splash} />
     </main>
 

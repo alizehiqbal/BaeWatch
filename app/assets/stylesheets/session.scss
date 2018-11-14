@@ -1,5 +1,5 @@
 body {
-  font-family: "Otari";
+  font-family: GT America;
   font-size: 20px;
   font-weight: 400;
   background: #fffdd0;
@@ -33,9 +33,20 @@ body {
 
     .login-input {
       background: white;
-      border: 1px solid;
+      border: 1px solid white;
       border-radius: 4px;
       margin-left: 10px;
+      padding-bottom: 10px;
+      padding: 10px;
+    }
+
+    input:focus {
+      background-color: #fffff0;
+    }
+
+    .inputty {
+      font-size: 12px;
+      padding-bottom: 12px;
     }
 
     label {
@@ -57,14 +68,14 @@ body {
   margin: 5px 0px;
 }
 
-.fb {
-  background-image: url("https://www.bigapple.in/img/login-facebook.png");
-  background-size: cover;
-  height: 50px;
-  // width: 200px;
-  border-radius: 4px;
-  width: 100%;
-}
+// .fb {
+//   background-image: url("https://www.bigapple.in/img/login-facebook.png");
+//   background-size: cover;
+//   height: 50px;
+//   // width: 200px;
+//   border-radius: 4px;
+//   width: 100%;
+// }
 
 .login-form-buttonies {
   display: flex;

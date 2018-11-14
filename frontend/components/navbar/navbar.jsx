@@ -10,8 +10,9 @@ class NavBar extends React.Component {
     return (
       <div className="navbar-container">
         <nav className="login-signup">
-          <Link to="/login">Login or </Link>
-          <Link to="/signup">Sign up!</Link>
+          <Link to="/login" className="continue">
+            Log In{" "}
+          </Link>
         </nav>
       </div>
     );

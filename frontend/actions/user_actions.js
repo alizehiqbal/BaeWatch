@@ -20,3 +20,6 @@ export const fetchUser = id => dispatch =>
 
 export const createUser = user => dispatch =>
   UserApiUtil.createUser(user).then(user => dispatch(receiveUser(user)));
+
+export const updateUser = user => dispatch =>
+  UserApiUtil.updateUser(user).then(user => dispatch(receiveCurrentUser(user)));

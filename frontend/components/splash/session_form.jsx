@@ -56,44 +56,51 @@ class SessionForm extends React.Component {
       );
     }
     return (
-      <body>
-        <div className="login-form-container">
-          <form onSubmit={e => this.handleSubmit(e)} className="login-form-box">
-            <p>Hey, you. Yeah, you. Ready to debug love?</p>
-            <p>Please {this.props.formType}</p>
-            <ul>{this.renderErrors()}</ul>
-            <div className="login-form">
-              <label>
-                Username:
-                <input
-                  type="text"
-                  value={this.state.username}
-                  onChange={this.update("username")}
-                  className="login-input"
-                />
-              </label>
-              <label>
-                Password:
-                <input
-                  type="password"
-                  value={this.state.password}
-                  onChange={this.update("password")}
-                  className="login-input"
-                />
-              </label>
-              <div className="login-form-buttonies">
-                <input
-                  className="session-submit"
-                  type="submit"
-                  value={this.props.formType}
-                />
-                <button className="fb" />
-                {demoButton}
-              </div>
+      <div className="login-form-container">
+        <form onSubmit={e => this.handleSubmit(e)} className="login-form-box">
+          <p>Hey, you. Yeah, you. Ready to debug love?</p>
+          <br />
+          <p>Please {this.props.formType}</p>
+          <br />
+          <br />
+          <ul>{this.renderErrors()}</ul>
+          <div className="login-form">
+            <span className="inputty">Username</span>
+            <label>
+              <input
+                type="text"
+                placeholder="Username"
+                value={this.state.username}
+                onChange={this.update("username")}
+                className="login-input"
+              />
+            </label>
+            <br />
+
+            <br />
+            <span className="inputty">Password</span>
+            <label>
+              <input
+                type="password"
+                placeholder="password"
+                value={this.state.password}
+                onChange={this.update("password")}
+                className="login-input"
+              />
+            </label>
+            <br />
+            <div className="login-form-buttonies">
+              <input
+                className="session-submit"
+                type="submit"
+                value={this.props.formType}
+              />
+              <button className="fb" />
+              {demoButton}
             </div>
-          </form>
-        </div>
-      </body>
+          </div>
+        </form>
+      </div>
     );
   }
 }
